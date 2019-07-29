@@ -13,6 +13,7 @@ var allLocationsArray = [];
 
 // rendering variables
 var pullDown = document.getElementById('dropdown');
+var ulEl = document.getElementById('locationList');
 
 function EHub(zipcode, locationArray) {
   this.zipcode = zipcode;
@@ -26,6 +27,17 @@ new EHub(98122, ['Horuichi P-Patch, Boren Ave & E. Yesler Way', 'Squire Park P-P
 
 console.log(allLocationsArray);
 
+
+EHub.prototype.renderList = function() {
+  console.log('this is the location array within renderList', this.locationArray);
+  for(var j = 0; j < this.locationArray.length; j++){
+    var liEl = document.createElement('li');
+    liEl.textContent = this.locationArray[j];
+    ulEl.appendChild(liEl);
+  }
+};
+
+
 function renderDropDown() {
   for (var i = 0; i < allLocationsArray.length; i++){
     var optionEl = document.createElement('option');
@@ -36,7 +48,15 @@ function renderDropDown() {
   }
 }
 
+
+
+
+for (var i = 0; i < allLocationsArray.length; i++){
+  allLocationsArray[i].renderList();
+}
+
 renderDropDown();
+
 
 // event listener
 
