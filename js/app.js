@@ -27,6 +27,7 @@ console.log(allLocationsArray);
 
 EHub.prototype.renderList = function() {
   console.log('this is the location array within renderList', this.locationArray);
+  ulEl.innerHTML = '';
   for(var j = 0; j < this.locationArray.length; j++){
     var liEl = document.createElement('li');
     liEl.textContent = this.locationArray[j];
