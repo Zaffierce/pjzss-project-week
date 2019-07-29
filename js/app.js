@@ -11,6 +11,7 @@ var allLocationsArray = [];
 // rendering variables
 var pullDown = document.getElementById('dropdown');
 var ulEl = document.getElementById('locationList');
+var selectedValue;
 
 function EHub(zipcode, locationArray) {
   this.zipcode = zipcode;
@@ -46,11 +47,24 @@ function renderDropDown() {
   }
 }
 
+
+function setLocalStorage() {
+  var stringifiedData = JSON.stringify(selectedValue);
+  localStorage.setItem('keyZip', stringifiedData);
+}
+
+
+function getLocalStorage() {
+  var getLocalStorage = localStorage.getItem('keyZip');
+  var parsedLocalStorage = JSON.parse(getLocalStorage);
+  selectedValue = parsedLocalStorage;
+}
+
+
 // Event Handler
 function handlePullDown() {
   console.log('inside handler');
-  var selectedValue = document.getElementById('dropdown').value;
-  //allLocationsArray[0].renderList();
+  selectedValue = document.getElementById('dropdown').value;
   for(var i = 0; i < allLocationsArray.length; i++){
     console.log(i, 'inside for loop of handlePullDown', selectedValue);
     console.log('checking zipcode and selectedValue', allLocationsArray[i].zipcode);
