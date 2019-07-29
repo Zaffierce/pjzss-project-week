@@ -1,55 +1,40 @@
 'use strict';
-var testButton = document.getElementById('submit');
-// var formFood = document.getElementById('foodList');
+var checkedItems = [];
+var shoppingList = document.forms['foodList'].elements['checkbox[]'];
 
-
-
-// formFood.addEventListener('click', testData);
-
-// function testData(event) {
-//   event.preventDefault();
-//   console.log(event.target.input.value);
-//   console.log('I am being clicked');
-// }
-
-
-// formFood.addEventListener('onclick', checkOff);
-
-// function checkOff() {
-//   var checkBox = document.getElementById('checkbox');
-//   if (checkBox.checked === true) {
-//     console.log('True');
-//   }
-// }
-
-
-function save(event) {
-  var checkbox = document.getElementById('checkbox');
-  var value = event.target.checkbox.value;
-  console.log(value)
-  localStorage.setItem('checkbox', checkbox.checked);
+for (var i = 0, len = shoppingList.length; i < len; i++) {
+    shoppingList[i].onclick = doSomething;
 }
 
-// testButton.addEventListener('click', save);
-// function save(){
-//    var checkbox = document.getElementById('checkbox1zaal1');
-//    if(document.getElementById('checkbox1zaal1').checked) {
-//        localStorage.setItem('checkbox1zaal1', true);
-//    }
-// }
-// function load(){
-//    var checked = localStorage.getItem('checkbox1zaal1');
-//    if (checked == true) {
-//        document.getElementById("checkbox1zaal1").setAttribute('checked','checked');
-//    }
-// }
-// function wis(){
-//    location.reload();
-//    localStorage.clear()
-// }
-// </script>
-// <body onload="load()">
-// <input type="button" id="ReserveerButton1" value="save" onclick="save()"/>
-// <input type="button" id="Wisbutton1" value="delete" onclick="wis()"/>
-// <input type="checkbox" id="checkbox1zaal1">1e film van de dag</input>
-// </body>
+// access properties of checkbox clicked using 'this' keyword
+function doSomething() {
+    if (this.checked === true) {
+        console.log('Item was checked');
+        checkedItems.push(this.value);
+        var jsonItems = JSON.stringify(checkedItems);
+        localStorage.setItem('food', jsonItems);
+        // if checked ...
+        // alert(this.value);
+    }
+    if (this.checked === false) {
+
+        var index = checkedItems.indexOf(this.value);
+        if (index !== -1) checkedItems.splice(index, 1);
+
+        var jsonItems = JSON.stringify(checkedItems);
+        localStorage.setItem('food', jsonItems);
+
+        var getItems = localStorage.getItem('food');
+        var parseItems = JSON.parse(getItems);
+
+
+
+        console.log('My parsed items', parseItems);
+        console.log('Item was unchecked');
+        console.log(checkedItems);
+    }
+};
+
+//When page loads, determine if any boxes are checked by looking through an array
+//If they are checked, push the value to the input tags
+//allow to add or delete checked items
