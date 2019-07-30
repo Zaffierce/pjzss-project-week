@@ -1,9 +1,22 @@
 'use strict';
 var checkedItems = [];
 var shoppingList = document.forms['foodList'].elements['checkbox[]'];
+// var valueBox = document.forms['foodList'].elements['valuebox'];
+// var valueBox = document.getElementById('valuebox[]');
+var valueBox = document.getElementsByClassName('valuebox');
+
+
+for (var i = 0; i < valueBox.length; i++) {
+    valueBox[i].addEventListener('click', doSomethingElse);
+}
 
 for (var i = 0, len = shoppingList.length; i < len; i++) {
     shoppingList[i].onclick = doSomething;
+}
+
+function doSomethingElse() {
+    console.log('My value of something else is ', this.value);
+    valueBox.textContent = 'Hello';
 }
 
 // access properties of checkbox clicked using 'this' keyword
@@ -13,6 +26,8 @@ function doSomething() {
         checkedItems.push(this.value);
         var jsonItems = JSON.stringify(checkedItems);
         localStorage.setItem('food', jsonItems);
+        // console.log();
+        //valueBox.textContent = 'Hello';
         // if checked ...
         // alert(this.value);
     }
@@ -21,7 +36,7 @@ function doSomething() {
         var index = checkedItems.indexOf(this.value);
         if (index !== -1) checkedItems.splice(index, 1);
 
-        var jsonItems = JSON.stringify(checkedItems);
+        jsonItems = JSON.stringify(checkedItems);
         localStorage.setItem('food', jsonItems);
 
         var getItems = localStorage.getItem('food');

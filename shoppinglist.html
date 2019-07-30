@@ -21,7 +21,7 @@
     <main>
         <h3>Numbers are based on the estimated three weeks of necessary supplies during a disaster -- LINK TO REF</h3>
         <h2>What is the size of your family?</h2>
-        <form>
+        <form onsubmit="calculateFamilyTotals()">
             <input type="text" name="familyNumber"><br>
             <!-- Have alert if !number -->
         </form>
@@ -34,34 +34,34 @@
                 <label>Value: </label><br>
 
                 <input type="checkbox" name="checkbox[]" value="cannedMeat"><label>Canned Meat</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: </label><br>
 
                 <input type="checkbox" name="checkbox[]" value="cannedVegetables"><label>Canned Vegetables</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: </label><br>
 
                 <input type="checkbox" name="checkbox[]" value="cannedFruits"><label>Canned Fruits</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: </label><br>
 
                 <input type="checkbox" name="checkbox[]" value="peanutButter"><label>Peanut Butter</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: </label><br>
 
                 <input type="checkbox" name="checkbox[]" value="jelly"><label>Jelly</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: </label><br>
 
                 <input type="checkbox" name="checkbox[]" value="proteinBars"><label>Protein Bars</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: </label><br>
 
                 <input type="checkbox" name="checkbox[]" value="wholeWheatCrackers"><label>Whole Wheat Crackers</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: </label><br>
 
                 <input type="checkbox" name="checkbox[]" value="driedFruit"><label>Dried Fruit</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: </label><br>
 
                 <input type="checkbox" name="checkbox[]" value="sportsDrinks"><label>Sports Drinks</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: </label><br>
 
                 <input type="checkbox" name="checkbox[]" value="powderedMilk"><label>Powdered Milk</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: </label><br>
             </fieldset>
 
             <button id="submit">Submit</button>
