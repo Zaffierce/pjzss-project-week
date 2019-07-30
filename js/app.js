@@ -75,9 +75,6 @@ function actionsOnLocalStorage() {
   }
 }
 
-// set above to equal the parced local storage, then it can be called above that. 
-
-
 
 // === Functions ===
 function renderDropDown() {
