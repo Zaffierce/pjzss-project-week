@@ -11,6 +11,7 @@ var allLocationsArray = [];
 // rendering variables
 var pullDown = document.getElementById('dropdown');
 var ulEl = document.getElementById('locationList');
+var elh2 = document.getElementById('zipcode-notification');
 var selectedValue;
 
 function EHub(zipcode, locationArray) {
@@ -41,10 +42,17 @@ function renderDropDown() {
   for (var i = 0; i < allLocationsArray.length; i++){
     var optionEl = document.createElement('option');
     optionEl.textContent = allLocationsArray[i].zipcode;
+    //optionEl.textContent=localStorage||allLocationsArray[i].zipcode;
     console.log(i);
     optionEl.value = allLocationsArray[i].zipcode;
     pullDown.appendChild(optionEl);
   }
+}
+
+if (localStorage.length > 0){
+  console.log('In if statement about local storage being greater than zero', localStorage);
+  getLocalStorage();
+  elh2.textContent = `The last zipcode you chose was ${getLocalStorage()}`;
 }
 
 
@@ -55,9 +63,10 @@ function setLocalStorage() {
 
 
 function getLocalStorage() {
-  var getLocalStorage = localStorage.getItem('keyZip');
-  var parsedLocalStorage = JSON.parse(getLocalStorage);
-  selectedValue = parsedLocalStorage;
+  var grabLocalStorage = localStorage.getItem('keyZip');
+  var parsedLocalStorage = JSON.parse(grabLocalStorage);
+  //selectedValue = parsedLocalStorage;
+  return parsedLocalStorage;
 }
 
 
@@ -66,8 +75,8 @@ function handlePullDown() {
   console.log('inside handler');
   selectedValue = document.getElementById('dropdown').value;
   for(var i = 0; i < allLocationsArray.length; i++){
-    console.log(i, 'inside for loop of handlePullDown', selectedValue);
-    console.log('checking zipcode and selectedValue', allLocationsArray[i].zipcode);
+    //console.log(i, 'inside for loop of handlePullDown', selectedValue);
+    //console.log('checking zipcode and selectedValue', allLocationsArray[i].zipcode);
     if (selectedValue === allLocationsArray[i].zipcode.toString()){
       
       allLocationsArray[i].renderList();
@@ -75,6 +84,7 @@ function handlePullDown() {
       console.log('in pullDown onchange function');
     }
   }
+  setLocalStorage();
 }
 
 
@@ -85,3 +95,4 @@ function handlePullDown() {
 
 pullDown.addEventListener('change', handlePullDown);
 renderDropDown();
+//setLocalStorage();
