@@ -11,8 +11,32 @@ var foodValues = [
     'Whole Wheat Crackers',
     'Dried Fruit',
     'Sports Drinks',
-    'Powdered Milk'
-]
+    'Powdered Milk',
+    'Flash Light',
+    'Batteries',
+    'Hand Cranked Radio',
+    'Space Blankets',
+    'Socks',
+    'Extra Clothes',
+    'Rain Coat',
+    'Boots',
+    'Sanitizing Wipes',
+    'Anti - bacterial Goop',
+    'Toilet Paper',
+    'Plastic Bags',
+    'Iodine Things',
+    'Bandaides',
+    'Medical Tape',
+    'Antiseptic Cream',
+    'Gauze',
+    'Vicodin',
+    'Scissors',
+    'Burn Jelly',
+    'Tweezers',
+    'Latex Gloves',
+    'Antacids',
+    'Anti - diarrhea Medication'
+];
 var fieldset = document.getElementById('foodFieldset');
 
 foodValues.forEach(function(food) {
@@ -24,13 +48,17 @@ foodValues.forEach(function(food) {
         // create label
         var newLabel = document.createElement('label');
         newLabel.textContent = food;
-        // create span
-        var newSpan = document.createElement('span');
-        newSpan.textContent = 'test';
+        // // create span
+        // var newSpan = document.createElement('span');
+        // newSpan.textContent = 'test';
+        // // create span
+        // var newSpan = document.createElement('span');
+        // newSpan.textContent = 'test';
         // add checkbox and label to fieldset
         fieldset.appendChild(newCheckBox);
         fieldset.appendChild(newLabel);
-        fieldset.appendChild(newSpan);
+        // fieldset.appendChild(newSpan);
+        // fieldset.appendChild(newSpan);
 
         // add click event listener for each checkbox
         newCheckBox.addEventListener('click', saveCheckState);
