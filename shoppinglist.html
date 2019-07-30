@@ -1,103 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Title for my website</title>
-  <link rel="stylesheet" type="text/css" href="css/reset.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Title for my website</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
+
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="#">link 1</a></li>
-				<li><a href="#">link 1</a></li>
-				<li><a href="#">link 1</a></li>
-			</ul>
-		</nav>
-	</header>
-	<script src="js/shopping.js" type="text/javascript"></script>
-	
-	<main>
-		<h3>Numbers are based on the estimated three weeks of necessary supplies during a disaster -- LINK TO REF</h3>
-		<h2>What is the size of your family?</h2>
-			<form>
-				<input type="text" name="familyNumber"><br>
-					<!-- Have alert if !number -->
-			</form>
-			Food
-			<form id="foodList">
-				<fieldset>
-					<!-- Reference to code in shopping.js -->
-					<!-- Food Items -->
-					<input type="checkbox" id="checkbox" value="water"><label>Water</label>
-					<label id="water">Value: </label><br >
-					<input type="checkbox" id="checkbox" value="cannedMeat"><label>Canned Meat</label>
-					<label id="cannedMeat">Value: </label><br >
-					<input type="checkbox" id="checkbox" value="cannedVegetables"><label>Canned Vegetables</label>
-					<label id="cannedVegetables">Value: </label><br >
-					<input type="checkbox" id="checkbox" value="cannedFruits"><label>Canned Fruits</label>
-					<label id="cannedFruits">Value: </label><br >
-					<input type="checkbox" id="checkbox" value="peanutButter"><label>Peanut Butter</label>
-					<label id="peanutButter">Value: </label><br >
-					<input type="checkbox" id="checkbox" value="jelly"><label>Jelly</label>
-					<label id="jelly">Value: </label><br >
-					<input type="checkbox" id="checkbox" value="proteinBars"><label>Protein Bars</label>
-					<label id="proteinBars">Value: </label><br >
-					<input type="checkbox" id="checkbox" value="wholeWheatCrackers"><label>Whole Wheat Crackers</label>
-					<label id="wholeWheatCrackers">Value: </label><br >
-					<input type="checkbox" id="checkbox" value="driedFruit"><label>Dried Fruit</label>
-					<label id="driedFruit">Value: </label><br >
-					<input type="checkbox" id="checkbox" value="sportsDrinks"><label>Sports Drinks</label>
-					<label id="sportsDrinks">Value: </label><br >
-					<input type="checkbox" id="checkbox" value="powderedMilk"><label>Powdered Milk</label>
-					<label id="powderedMilk">Value: </label><br >
-				</fieldset>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">link 1</a></li>
+                <li><a href="#">link 1</a></li>
+                <li><a href="#">link 1</a></li>
+            </ul>
+        </nav>
+    </header>
 
-				<button id="submit" onClick="save()">Submit</button>
-			</form>
+    <main>
+        <h3>Numbers are based on the estimated three weeks of necessary supplies during a disaster -- LINK TO REF</h3>
+        <h2>What is the size of your family?</h2>
+        <section id="familyForm">
+        <form id="familySize-form">
+            <input type="text" id="family-number" name ="familyNumber"><br>
+            <button type="submit" name="familyNumberButton">Submit Family Number</button>
+            <!-- Have alert if !number -->
+        </form>
+        </section>
+        Food
+        <form id="foodList">
+            <fieldset>
+                <!-- Reference to code in shopping.js -->
+                <!-- Food Items -->
+                <input type="checkbox" name="checkbox[]" value="water"><label>Water</label>
+                <label class="valuebox">Value: 1</label><br>
 
-			Survival
-			<form id="survivalList">
-				<fieldset>
-					<!-- Reference to code in shopping.js -->
-					<!-- Survival Items -->
-					<input type="checkbox" id="" value="save"><label>Flash Light</label><br >
-					<input type="checkbox" id="" value=""><label>Batteries</label><br >
-					<input type="checkbox" id="" value=""><label>Hand Cranked Radio</label><br >
-					<input type="checkbox" id="" value=""><label>Space Blankets</label><br >
-					<input type="checkbox" id="" value=""><label>Socks</label><br >
-					<input type="checkbox" id="" value=""><label>Extra Clothes</label><br >
-					<input type="checkbox" id="" value=""><label>Rain Coat</label><br >
-					<input type="checkbox" id="" value=""><label>Boots</label><br >
-					<input type="checkbox" id="" value=""><label>Sanitizing Wipes</label><br >
-					<input type="checkbox" id="" value=""><label>Anti-bacterial Goop?</label><br >
-					<input type="checkbox" id="" value=""><label>Toilet Paper</label><br >
-					<input type="checkbox" id="" value=""><label>Plastic Bags</label><br >
-					<input type="checkbox" id="" value=""><label>Iodine Things</label><br >
-				</fieldset>
-			</form>
-				Medical
-				<form id="medicalList">
-					<fieldset>
-						<!-- Reference to code in shopping.js -->
-						<!-- First Aid Items -->
-						<input type="checkbox" id="" value="save"><label>Bandaides</label><br >
-						<input type="checkbox" id="" value=""><label>Medical Tape</label><br >
-						<input type="checkbox" id="" value=""><label>Antiseptic Cream</label><br >
-						<input type="checkbox" id="" value=""><label>Gauze</label><br >
-						<input type="checkbox" id="" value=""><label>Vicodin</label><br >
-						<input type="checkbox" id="" value=""><label>Scissors</label><br >
-						<input type="checkbox" id="" value=""><label>Burn Jelly</label><br >
-						<input type="checkbox" id="" value=""><label>Tweezers</label><br >
-						<input type="checkbox" id="" value=""><label>Latex Gloves</label><br >
-						<input type="checkbox" id="" value=""><label>Antacids</label><br >
-						<input type="checkbox" id="" value=""><label>Anti-diarrhea Medication</label><br >
-					</fieldset>
-				</form>
-	</main>
-	
-	<footer>
-		
-	</footer>
+                <input type="checkbox" name="checkbox[]" value="cannedMeat"><label>Canned Meat</label>
+                <label class="valuebox">Value: 1</label><br>
+
+                <input type="checkbox" name="checkbox[]" value="cannedVegetables"><label>Canned Vegetables</label>
+                <label class="valuebox">Value: 1</label><br>
+
+                <input type="checkbox" name="checkbox[]" value="cannedFruits"><label>Canned Fruits</label>
+                <label class="valuebox">Value: 1</label><br>
+
+                <input type="checkbox" name="checkbox[]" value="peanutButter"><label>Peanut Butter</label>
+                <label>Value: </label><br>
+
+                <input type="checkbox" name="checkbox[]" value="jelly"><label>Jelly</label>
+                <label>Value: </label><br>
+
+                <input type="checkbox" name="checkbox[]" value="proteinBars"><label>Protein Bars</label>
+                <label>Value: </label><br>
+
+                <input type="checkbox" name="checkbox[]" value="wholeWheatCrackers"><label>Whole Wheat Crackers</label>
+                <label>Value: </label><br>
+
+                <input type="checkbox" name="checkbox[]" value="driedFruit"><label>Dried Fruit</label>
+                <label>Value: </label><br>
+
+                <input type="checkbox" name="checkbox[]" value="sportsDrinks"><label>Sports Drinks</label>
+                <label>Value: </label><br>
+
+                <input type="checkbox" name="checkbox[]" value="powderedMilk"><label>Powdered Milk</label>
+                <label>Value: </label><br>
+            </fieldset>
+
+            <button id="submit">Submit</button>
+        </form>
+
+        Survival
+        <form id="survivalList">
+            <fieldset>
+                <!-- Reference to code in shopping.js -->
+                <!-- Survival Items -->
+                <input type="checkbox" id="" value="save"><label>Flash Light</label><br>
+                <input type="checkbox" id="" value=""><label>Batteries</label><br>
+                <input type="checkbox" id="" value=""><label>Hand Cranked Radio</label><br>
+                <input type="checkbox" id="" value=""><label>Space Blankets</label><br>
+                <input type="checkbox" id="" value=""><label>Socks</label><br>
+                <input type="checkbox" id="" value=""><label>Extra Clothes</label><br>
+                <input type="checkbox" id="" value=""><label>Rain Coat</label><br>
+                <input type="checkbox" id="" value=""><label>Boots</label><br>
+                <input type="checkbox" id="" value=""><label>Sanitizing Wipes</label><br>
+                <input type="checkbox" id="" value=""><label>Anti-bacterial Goop?</label><br>
+                <input type="checkbox" id="" value=""><label>Toilet Paper</label><br>
+                <input type="checkbox" id="" value=""><label>Plastic Bags</label><br>
+                <input type="checkbox" id="" value=""><label>Iodine Things</label><br>
+            </fieldset>
+        </form>
+        Medical
+        <form id="medicalList">
+            <fieldset>
+                <!-- Reference to code in shopping.js -->
+                <!-- First Aid Items -->
+                <input type="checkbox" id="" value="save"><label>Bandaides</label><br>
+                <input type="checkbox" id="" value=""><label>Medical Tape</label><br>
+                <input type="checkbox" id="" value=""><label>Antiseptic Cream</label><br>
+                <input type="checkbox" id="" value=""><label>Gauze</label><br>
+                <input type="checkbox" id="" value=""><label>Vicodin</label><br>
+                <input type="checkbox" id="" value=""><label>Scissors</label><br>
+                <input type="checkbox" id="" value=""><label>Burn Jelly</label><br>
+                <input type="checkbox" id="" value=""><label>Tweezers</label><br>
+                <input type="checkbox" id="" value=""><label>Latex Gloves</label><br>
+                <input type="checkbox" id="" value=""><label>Antacids</label><br>
+                <input type="checkbox" id="" value=""><label>Anti-diarrhea Medication</label><br>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <script src="js/shopping.js" type="text/javascript"></script>
+    </footer>
 </body>
+
 </html>
