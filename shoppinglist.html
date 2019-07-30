@@ -21,26 +21,29 @@
     <main>
         <h3>Numbers are based on the estimated three weeks of necessary supplies during a disaster -- LINK TO REF</h3>
         <h2>What is the size of your family?</h2>
-        <form>
-            <input type="text" name="familyNumber"><br>
+        <section id="familyForm">
+        <form id="familySize-form">
+            <input type="text" id="family-number" name ="familyNumber"><br>
+            <button type="submit" name="familyNumberButton">Submit Family Number</button>
             <!-- Have alert if !number -->
         </form>
+        </section>
         Food
         <form id="foodList">
             <fieldset>
                 <!-- Reference to code in shopping.js -->
                 <!-- Food Items -->
                 <input type="checkbox" name="checkbox[]" value="water"><label>Water</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: 1</label><br>
 
                 <input type="checkbox" name="checkbox[]" value="cannedMeat"><label>Canned Meat</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: 1</label><br>
 
                 <input type="checkbox" name="checkbox[]" value="cannedVegetables"><label>Canned Vegetables</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: 1</label><br>
 
                 <input type="checkbox" name="checkbox[]" value="cannedFruits"><label>Canned Fruits</label>
-                <label>Value: </label><br>
+                <label class="valuebox">Value: 1</label><br>
 
                 <input type="checkbox" name="checkbox[]" value="peanutButter"><label>Peanut Butter</label>
                 <label>Value: </label><br>
