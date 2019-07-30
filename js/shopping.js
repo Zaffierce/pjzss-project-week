@@ -54,10 +54,30 @@ function renderList() {
         newSpan.appendChild(newLabel);
         newCheckBox.addEventListener('click', saveCheckState);
 
-        function createUpdatedShoppingNumber() {
-
-        }
     });
+}
+
+function createUpdatedShoppingNumber(content) {
+    var fieldset = document.getElementById('foodFieldset');
+    fieldset.innerHTML = '';
+    foodValues.forEach(function(food) {
+        //create the checkbox
+        var newCheckBox = document.createElement('input');
+        newCheckBox.type = 'checkbox';
+        newCheckBox.name = 'foodCheckbox';
+        newCheckBox.value = food.name;
+        //create the span
+        var newSpan = document.createElement('span');
+        fieldset.appendChild(newSpan);
+        newSpan.appendChild(newCheckBox);
+        var newLabel = document.createElement('label');
+        var newFood = food.amount = food.amount * content;
+        newLabel.textContent = `${food.name} / ${newFood} / ${food.unit}`;
+        newSpan.appendChild(newLabel);
+        newCheckBox.addEventListener('click', saveCheckState);
+    });
+    restoreCheckState();
+    // do we want this here? - check with team
 }
 
 renderList();
@@ -104,7 +124,7 @@ function submitFamilySize(event) {
         alert('Please retry with a Number.');
     } else {
         console.log(content);
-        createUpdatedShoppingNumber();
+        createUpdatedShoppingNumber(content);
     }
 }
 familyFormEl.addEventListener('submit', submitFamilySize);
