@@ -10,9 +10,9 @@ var elh2 = document.getElementById('zipcode-notification');
 var selectedValue;
 
 function EHub(zipcode, locationArray) {
-    this.zipcode = zipcode;
-    this.locationArray = locationArray;
-    allLocationsArray.push(this);
+  this.zipcode = zipcode;
+  this.locationArray = locationArray;
+  allLocationsArray.push(this);
 }
 
 // === Instances ===
@@ -53,70 +53,76 @@ new EHub('98178', ['Leo Farm, 51st Ave S and S Leo St']);
 console.log(allLocationsArray);
 
 // === Prototype Function - renders location array living in constructor function ===
-EHub.prototype.renderList = function() {
-    console.log('this is the location array within renderList', this.locationArray);
-    ulEl.innerHTML = '';
-    for (var j = 0; j < this.locationArray.length; j++) {
-        var liEl = document.createElement('li');
-        liEl.textContent = this.locationArray[j];
-        ulEl.appendChild(liEl);
-    }
+EHub.prototype.renderList = function () {
+  console.log('this is the location array within renderList', this.locationArray);
+  ulEl.innerHTML = '';
+  for (var j = 0; j < this.locationArray.length; j++) {
+    var liEl = document.createElement('li');
+    liEl.textContent = this.locationArray[j];
+    ulEl.appendChild(liEl);
+  }
 };
 
 
 // Does actions if localStorage exists
-if (localStorage.keyZip.length > 0) {
+function actionsOnLocalStorage() {
+  if (localStorage.length > 0) {
     console.log('Inside if statement about local storage being greater than zero', localStorage);
     getLocalStorage();
     elh2.textContent = `The last zipcode you chose was ${getLocalStorage()}`;
-    // set above to equal the parced local storage, then it can be called above that. 
+  } else {
+    elh2.textContent = '';
+  }
 }
+
+// set above to equal the parced local storage, then it can be called above that. 
+
 
 
 // === Functions ===
 function renderDropDown() {
-    for (var i = 0; i < allLocationsArray.length; i++) {
-        var optionEl = document.createElement('option');
-        optionEl.textContent = allLocationsArray[i].zipcode;
-        //optionEl.textContent=localStorage||allLocationsArray[i].zipcode;
-        console.log(i);
-        optionEl.value = allLocationsArray[i].zipcode;
-        pullDown.appendChild(optionEl);
-    }
+  for (var i = 0; i < allLocationsArray.length; i++) {
+    var optionEl = document.createElement('option');
+    optionEl.textContent = allLocationsArray[i].zipcode;
+    //optionEl.textContent=localStorage||allLocationsArray[i].zipcode;
+    console.log(i);
+    optionEl.value = allLocationsArray[i].zipcode;
+    pullDown.appendChild(optionEl);
+  }
 }
 
 
 function setLocalStorage() {
-    var stringifiedData = JSON.stringify(selectedValue);
-    localStorage.setItem('keyZip', stringifiedData);
+  var stringifiedData = JSON.stringify(selectedValue);
+  localStorage.setItem('keyZip', stringifiedData);
 }
 
 
 function getLocalStorage() {
-    var grabLocalStorage = localStorage.getItem('keyZip');
-    var parsedLocalStorage = JSON.parse(grabLocalStorage);
-    //selectedValue = parsedLocalStorage;
-    return parsedLocalStorage;
+  var grabLocalStorage = localStorage.getItem('keyZip');
+  var parsedLocalStorage = JSON.parse(grabLocalStorage);
+  //selectedValue = parsedLocalStorage;
+  return parsedLocalStorage;
 }
 
 
 // === Event Handler ===
 function handlePullDown() {
-    //console.log('inside handler');
-    selectedValue = document.getElementById('dropdown').value;
-    for (var i = 0; i < allLocationsArray.length; i++) {
-        //console.log(i, 'inside for loop of handlePullDown', selectedValue);
-        //console.log('checking zipcode and selectedValue', allLocationsArray[i].zipcode);
-        if (selectedValue === allLocationsArray[i].zipcode.toString()) {
+  //console.log('inside handler');
+  actionsOnLocalStorage();
+  selectedValue = document.getElementById('dropdown').value;
+  for (var i = 0; i < allLocationsArray.length; i++) {
 
-            allLocationsArray[i].renderList();
+    //console.log(i, 'inside for loop of handlePullDown', selectedValue);
+    //console.log('checking zipcode and selectedValue', allLocationsArray[i].zipcode);
+    if (selectedValue === allLocationsArray[i].zipcode.toString()) {
+      allLocationsArray[i].renderList();
 
-            console.log('inside if statement of selectedValue', allLocationsArray[i].locationArray);
-            console.log('in pullDown onchange function');
-        }
+      console.log('inside if statement of selectedValue', allLocationsArray[i].locationArray);
+      console.log('in pullDown onchange function');
     }
-    setLocalStorage();
-    elh2.textContent = `The last zipcode you chose was ${getLocalStorage()}`;
+  }
+  setLocalStorage();
 }
 
 
