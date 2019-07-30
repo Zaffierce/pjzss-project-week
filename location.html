@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Location Page</title>
   <link rel="stylesheet" type="text/css" href="css/reset.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
+
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="#">link 1</a></li>
-				<li><a href="#">link 1</a></li>
-				<li><a href="#">link 1</a></li>
-			</ul>
-		</nav>
-	</header>
-	
-	<main>
-		<h1>Please Pick Your ZipCode</h1>
-		<!-- random fact -->
-		<h2 id="zipcode-notification"></h2>
-		<form>
-			<label>Drop Down Menu</label>
-			<select id="dropdown">
-				<option value="default">[Select your Zip]</option>
-			</select>
-		</form>
-		<button onclick="window.print()">Print This Page</button>
-		<ul id="locationList">
-		</ul>
-		<!-- iframe for map -->
-	</main>
-	
-	<footer>
-		<script src="js/app.js" type="text/javascript"></script>
-	</footer>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">link 1</a></li>
+        <li><a href="#">link 1</a></li>
+        <li><a href="#">link 1</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Please Pick Your ZipCode</h1>
+    <!-- random fact -->
+    <h2 id="zipcode-notification"></h2>
+    <form>
+      <label>Drop Down Menu</label>
+      <select id="dropdown">
+        <option value="default">[Select your Zip]</option>
+      </select>
+    </form>
+    <button onclick="window.print()">Print This Page</button>
+    <ul id="locationList">
+    </ul>
+    <!-- iframe for map -->
+    <div>
+      <h3>For all Emergency Hub Locations, please see the map below.</h3>
+      <iframe src="https://www.google.com/maps/d/embed?mid=1mtS4LK_-BMm2TqP2su-Y1cIZUOk" width="640"
+        height="480"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <script src=" js/app.js" type="text/javascript"></script>
+  </footer>
 </body>
+
 </html>

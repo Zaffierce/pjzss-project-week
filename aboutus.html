@@ -1,9 +1,11 @@
+<!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Title for my website</title>
   <link rel="stylesheet" type="text/css" href="css/reset.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/aboutus.css" />
 </head>
 <body>
 	<header>
@@ -17,10 +19,57 @@
 	</header>
 	
 	<main>
-	</main>
+     <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="img/jon.png" style="width:100%">
+      <div class="text">Jon is a 29 year old IT professional and software developer who has spent the last 9 years of his life serving in the U.S. Navy.  He lived in Japan for 6 years but can barely speak or read Japanese!  In his free time, he can be found off-roading in his Suzuki Jimny or at home, developing software.  His goal after completing his school is to get a job in Tokyo.</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="img/peter.png" style="width:100%">
+      <div class="text">Mauris a diam maecenas sed enim ut sem viverra aliquet. Leo vel orci porta non. Pretium vulputate sapien nec sagittis aliquam malesuada. Netus et malesuada fames ac turpis. Nunc vel risus commodo viverra maecenas accumsan lacus vel. Egestas diam in arcu cursus euismod quis viverra nibh cras.</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="img/sharina.png" style="width:100%">
+      <div class="text">Sharina Stubbs is a software developer who is disturbingly fascinated by natural disasters, particularly volcanic eruptions, tsunamis and earthquakes. She is that person who will point out all the unreinforced masonry buildings (URMs) in Seattle, monitor her elevation in case of a tsunami, and stash food like a squirrel in case the world ends.</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="img/susanna.png" style="width:100%">
+        <div class="text">Susanna grew up on the dry side of the state in Kennewick, WA before moving to Seattle nine years ago.  She spent the last four years working in a cat shelter before deciding to learn how to code at Code Fellows.  When she’s not busy learning, she can be found cuddling her three cats, crocheting, and watching Star Trek with her husband.</div>
+      </div>
+    <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="img/zerek.png" style="width:100%">
+        <div class="text">Egestas pretium aenean pharetra magna. Risus sed vulputate odio ut enim blandit volutpat maecenas. Ultrices gravida dictum fusce ut. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Tellus at urna condimentum mattis pellentesque id nibh.</div>
+      </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <!-- <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div> 
+	</main> -->
 	
 	<footer>
-		<script src="js/app.js" type="text/javascript"></script>
+    <!-- <script src="js/app.js" type="text/javascript"></script> -->
+    <script src="js/aboutus.js" type="text/javascript"></script>
 	</footer>
 </body>
 </html>
