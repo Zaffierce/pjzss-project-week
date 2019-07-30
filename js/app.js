@@ -63,6 +63,16 @@ EHub.prototype.renderList = function () {
   }
 };
 
+function renderAllLocations() {
+  for (var i = 0; i < allLocationsArray.length; i++) {
+    for (var j = 0; j < allLocationsArray[j].locationArray.length; j++) {
+      var liEl = document.createElement('li');
+      liEl.textContent = allLocationsArray[i].locationArray[j];
+      ulEl.appendChild(liEl);
+    }
+  }
+}
+
 
 // Does actions if localStorage exists
 function actionsOnLocalStorage() {
@@ -78,8 +88,12 @@ function actionsOnLocalStorage() {
 
 // === Functions ===
 function renderDropDown() {
+  var optionEl = document.createElement('option');
+  optionEl.textContent = 'Show All';
+  optionEl.value = 'Show All';
+  pullDown.appendChild(optionEl);
   for (var i = 0; i < allLocationsArray.length; i++) {
-    var optionEl = document.createElement('option');
+    optionEl = document.createElement('option');
     optionEl.textContent = allLocationsArray[i].zipcode;
     //optionEl.textContent=localStorage||allLocationsArray[i].zipcode;
     console.log(i);
@@ -118,6 +132,10 @@ function handlePullDown() {
       console.log('inside if statement of selectedValue', allLocationsArray[i].locationArray);
       console.log('in pullDown onchange function');
     }
+
+  }
+  if (selectedValue === 'Show All') {
+    renderAllLocations();
   }
   setLocalStorage();
 }
