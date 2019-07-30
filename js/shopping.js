@@ -1,78 +1,72 @@
 'use strict';
 
-var checkedItems = [];
-var shoppingList = document.forms['foodList'].elements['checkbox[]'];
-// var valueBox = document.forms['foodList'].elements['valuebox'];
-// var valueBox = document.getElementById('valuebox[]');
-var valueBox = document.getElementsByClassName('valuebox');
-// var valueBox = document.getElementById('valuebox');
-var familyFormEl = document.getElementById('familyForm');
-var familyButtonEl = document.getElementById('familyNum-button');
+var foodValues = [
+    'Water',
+    'Canned Meat',
+    'Canned Vegetables',
+    'Canned Fruits',
+    'Peanut Butter',
+    'Jelly',
+    'Protein Bars',
+    'Whole Wheat Crackers',
+    'Dried Fruit',
+    'Sports Drinks',
+    'Powdered Milk'
+]
+var fieldset = document.getElementById('foodFieldset');
 
-//data-
-// console.log(familyFormEl);
+foodValues.forEach(function(food) {
+        // create checkbox
+        var newCheckBox = document.createElement('input');
+        newCheckBox.type = 'checkbox';
+        newCheckBox.name = 'foodCheckbox';
+        newCheckBox.value = food;
+        // create label
+        var newLabel = document.createElement('label');
+        newLabel.textContent = food;
+        // create span
+        var newSpan = document.createElement('span');
+        newSpan.textContent = 'test';
+        // add checkbox and label to fieldset
+        fieldset.appendChild(newCheckBox);
+        fieldset.appendChild(newLabel);
+        fieldset.appendChild(newSpan);
 
-for (var i = 0; i < valueBox.length; i++) {
-  valueBox[i].addEventListener('click', doSomethingElse);
+        // add click event listener for each checkbox
+        newCheckBox.addEventListener('click', saveCheckState);
+    })
+    // add saved state to checkboxes after rendering checkboxes
+restoreCheckState();
+
+// called for all clicks on checkboxes (both check and uncheck events)
+function saveCheckState() {
+    // feeding food:value and checked:state into array
+    var foodStates = [];
+    var foodCheckboxes = document.getElementsByName('foodCheckbox');
+    foodCheckboxes.forEach(function(foodCheckbox) {
+        var x = { food: foodCheckbox.value, checked: foodCheckbox.checked };
+        foodStates.push(x);
+    });
+    console.log(foodStates);
+    localStorage.setItem('FoodState', JSON.stringify(foodStates));
 }
 
-
-for (var i = 0, len = shoppingList.length; i < len; i++) {
-  shoppingList[i].onclick = doSomething;
+function restoreCheckState() {
+    var foodState = localStorage.getItem('FoodState')
+    if (!foodState) {
+        return;
+    }
+    foodState = JSON.parse(foodState);
+    var foodCheckboxes = document.getElementsByName('foodCheckbox');
+    // iterate through each checkbox in the DOM
+    foodCheckboxes.forEach(function(foodCheckbox) {
+        // interate through each food in saved state
+        foodState.forEach(function(foodFromState) {
+            // if the DOM has the same food value as the saved state food name
+            if (foodCheckbox.value === foodFromState.food) {
+                // change the checked status to the saved state
+                foodCheckbox.checked = foodFromState.checked;
+            }
+        })
+    })
 }
-
-// for (var j = 0, leng = valueBox.length; j < leng; j++) {
-//   valueBox[j].onclick = doSomethingElse;
-// }
-
-function submitFamilySize(event) {
-  event.preventDefault();
-  // var content = event.target.textContent;
-  var content = event.target.familyNumber.value;
-  console.log(content);
-  console.log('Something');
-}
-
-function doSomethingElse() {
-  console.log('My value of something else is ', this.textContent);
-  this.textContent = 'Value: 1';
-}
-
-// access properties of checkbox clicked using 'this' keyword
-function doSomething() {
-  if (this.checked === true) {
-    console.log('Item was checked');
-    checkedItems.push(this.value);
-    var jsonItems = JSON.stringify(checkedItems);
-    localStorage.setItem('food', jsonItems);
-    // console.log();
-    //valueBox.textContent = 'Hello';
-    // if checked ...
-    // alert(this.value);
-  }
-  if (this.checked === false) {
-
-    var index = checkedItems.indexOf(this.value);
-    if (index !== -1) checkedItems.splice(index, 1);
-
-    jsonItems = JSON.stringify(checkedItems);
-    localStorage.setItem('food', jsonItems);
-
-    var getItems = localStorage.getItem('food');
-    var parseItems = JSON.parse(getItems);
-
-
-
-    console.log('My parsed items', parseItems);
-    console.log('Item was unchecked');
-    console.log(checkedItems);
-  }
-}
-
-// familyButtonEl.addEventListener('click', submitFamilySize);
-familyFormEl.addEventListener('submit', submitFamilySize);
-
-
-//When page loads, determine if any boxes are checked by looking through an array
-//If they are checked, push the value to the input tags
-//allow to add or delete checked items
