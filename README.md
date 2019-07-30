@@ -58,8 +58,9 @@ JavaScript Dev's and Students at CodeFellows:
 * Susanna Lakey
 * Sharina Stubbs
 
+
 ## Conflict Resolution Plan 
-###Group Guidelines 
+
 Communication Formats After Hours and On Weekend: 
 * Slack  
 * Trello for file sharing, To Do lists 
@@ -68,53 +69,29 @@ Communication in the code:
 * Go way overkill on the comments. Comment at every single line getting started. 
 
 Emergency communication 
-
-Sharina- call twice... 206-919-1357 
-
-Peter – 425-802-8005 
-
-Susanna – 206-496-2611 
-
-Jon – 360-994-0078 
-
-Zarek – 505-933-0591   
-
- 
+* Sharina- call twice... 206-919-1357 
+* Peter – 425-802-8005 
+* Susanna – 206-496-2611 
+* Jon – 360-994-0078 
+* Zarek – 505-933-0591   
 
 Group Working Hours 
-
-9am – 6pm group time 
-
-8am- 9:15pm be aware group member(s) may need to communicate 
-
- 
+* 9am – 6pm group time 
+* 8am- 9:15pm be aware group member(s) may need to communicate 
 
 Strategy for Making Sure Voices are Heard (within a safe environment) 
-
-Three a day check-in meetings: 
-
-Morning meeting - 9am start time – debrief and prep for day  
-
-After lunch – 1pm start time – review the morning, re-check in, and brainstorm as needed for afternoon. 
-
-Before leaving for the day – 5:30pm? How the morning and afternoon went 
+* Three a day check-in meetings
+* Morning meeting - 9am start time – debrief and prep for day  
+* After lunch – 1pm start time – review the morning, re-check in, and brainstorm as needed for afternoon. 
+* Before leaving for the day – 5:30pm? How the morning and afternoon went 
 
 General Guidelines: 
-
-Code review occurs at each meetups 
-
-Be patient and kind with each other. 
-
-Suggestion: Start sentences with “I need...”  
-
-There are no bad ideas 
-
-Failure will happen and it’s okay! We do this thing together.  
-
- 
+* Code review occurs at each meetups 
+* Be patient and kind with each other. 
+* Suggestion: Start sentences with “I need...”  
+* There are no bad ideas 
+* Failure will happen and it’s okay! We do this thing together.  
 
 If we’re moving too fast: 
-
-Person who is slower - speak up! Fast coders can slow down.  
-
-Person who is coding fast may need to take a break and help person catch up.  
+* Person who is slower - speak up! Fast coders can slow down.  
+* Person who is coding fast may need to take a break and help person catch up.  
