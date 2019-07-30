@@ -128,8 +128,3 @@ function submitFamilySize(event) {
     }
 }
 familyFormEl.addEventListener('submit', submitFamilySize);
-
-
-// after amount is entered
-// checks if they entered, if not, render
-// if they do, multiply
