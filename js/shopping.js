@@ -1,6 +1,7 @@
 'use strict';
 
 var foodValues = [
+<<<<<<< HEAD
   'Water',
   'Canned Meat',
   'Canned Vegetables',
@@ -31,6 +32,66 @@ foodValues.forEach(function (food) {
   fieldset.appendChild(newCheckBox);
   fieldset.appendChild(newLabel);
   fieldset.appendChild(newSpan);
+=======
+    { name: 'Water ', amount: 21, unit: ' gallons' },
+    { name: 'Canned Meat ', amount: 7, unit: ' cans' },
+    { name: 'Canned Vegetables ', amount: 7, unit: ' cans' },
+    { name: 'Canned Fruits ', amount: 7, unit: ' cans' },
+    { name: 'Peanut Butter ', amount: 1, unit: ' jar' },
+    { name: 'Jelly ', amount: 1, unit: ' jar' },
+    { name: 'Protein Bars ', amount: 21, unit: ' bars' },
+    { name: 'Whole Wheat Crackers ', amount: 6, unit: ' boxes' },
+    { name: 'Dried Fruit ', amount: 10, unit: ' bags' },
+    { name: 'Sports Drinks ', amount: 21, unit: ' bottles' },
+    { name: 'Powdered Milk ', amount: 3, unit: ' boxes' },
+    { name: 'Flash Light ', amount: 1, unit: ' each' },
+    { name: 'Batteries ', amount: 1, unit: ' boxe(s)' },
+    { name: 'Hand Cranked Radio ', amount: 1, unit: ' each' },
+    { name: 'Space Blankets ', amount: 1, unit: ' each' },
+    { name: 'Rain Coat ', amount: 1, unit: ' per person' },
+    { name: 'Clothes ', amount: 10, unit: ' pair per person' },
+    { name: 'Socks ', amount: 8, unit: ' pair per person' },
+    { name: 'Boots ', amount: 1, unit: ' per person' },
+    { name: 'Sanitizing Wipes ', amount: 3, unit: ' packs' },
+    { name: 'Anti - bacterial Goop ', amount: 3, unit: ' packs' },
+    { name: 'Toilet Paper ', amount: 2, unit: ' packs' },
+    { name: 'Plastic Baggies ', amount: 3, unit: ' packs' },
+    { name: 'Iodine Things ', amount: 21, unit: ' packs' },
+    { name: 'Bandaides ', amount: 2, unit: ' packs' },
+    { name: 'Medical Tape ', amount: 1, unit: ' pack' },
+    { name: 'Antiseptic Cream ', amount: 1, unit: ' pack' },
+    { name: 'Gauze ', amount: 2, unit: ' packs' },
+    { name: 'Vicodin ', amount: 50, unit: ' pills' },
+    { name: 'Scissors ', amount: 2, unit: ' pair' },
+    { name: 'Burn Jelly ', amount: 2, unit: ' containers' },
+    { name: 'Tweezers ', amount: 2, unit: ' sets' },
+    { name: 'Latex Gloves ', amount: 2, unit: ' packs' },
+    { name: 'Antacids ', amount: 2, unit: ' packs' },
+    { name: 'Anti - diarrhea Medication ', amount: 2, unit: ' packs' }
+];
+var fieldset = document.getElementById('foodFieldset');
+
+foodValues.forEach(function(food) {
+        // create checkbox
+        var newCheckBox = document.createElement('input');
+        newCheckBox.type = 'checkbox';
+        newCheckBox.name = 'foodCheckbox';
+        newCheckBox.value = food;
+        // create label
+        var newLabel = document.createElement('label');
+        newLabel.textContent = food.name;
+        // create span
+        var newSpan1 = document.createElement('span');
+        newSpan1.textContent = food.amount;
+        // create span
+        var newSpan2 = document.createElement('span');
+        newSpan2.textContent = food.unit;
+        // add checkbox and label to fieldset
+        fieldset.appendChild(newCheckBox);
+        fieldset.appendChild(newLabel);
+        fieldset.appendChild(newSpan1);
+        fieldset.appendChild(newSpan2);
+>>>>>>> f8c1d3387cb8ac92c34d82ff1a1b78eb83fe1831
 
   // add click event listener for each checkbox
   newCheckBox.addEventListener('click', saveCheckState);
@@ -68,5 +129,22 @@ function restoreCheckState() {
         foodCheckbox.checked = foodFromState.checked;
       }
     })
+<<<<<<< HEAD
   })
 }
+=======
+}
+
+var familyFormEl = document.getElementById('familyForm');
+
+function submitFamilySize(event) {
+    event.preventDefault();
+    var content = event.target.familyNumber.value;
+    if (isNaN(content)) {
+        alert('Please retry with a Number.')
+    } else {
+        console.log(content);
+    }
+}
+familyFormEl.addEventListener('submit', submitFamilySize);
+>>>>>>> f8c1d3387cb8ac92c34d82ff1a1b78eb83fe1831
