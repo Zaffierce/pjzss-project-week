@@ -23,29 +23,40 @@ To view the Repository, please visit the web address:<br>
 ### Websites
 
 * Stack Overflow
-    * (https://stackoverflow.com/)
+    * https://stackoverflow.com/
 * W3Schools 
-    * (https://www.w3schools.com/)
-* Pacific Northwest Seismic Network (Earthquake map) 
-    * (https://pnsn.org/)
-    * (https://www.facebook.com/groups/thePNSN/?ref=bookmarks)
+    * https://www.w3schools.com/
+* Pacific Northwest Seismic Network 
+    * https://pnsn.org/
+    * https://www.facebook.com/groups/thePNSN/?ref=bookmarks
 * Seattle . Gov
-    * (https://www.seattle.gov/emergency-management/prepare/prepare-yourself#buildingakit)
-    * (https://www.seattle.gov/emergency-management/prepare/prepare-yourself#buildingakit)
+    * https://www.seattle.gov/emergency-management/prepare/prepare-yourself#buildingakit
+    * https://www.seattle.gov/emergency-management/prepare/prepare-yourself#buildingakit
+    * https://www.seattle.gov/emergency-management/hazards/earthquake 
+* Oregon . Gov
+    * https://www.oregon.gov/oem/hazardsprep/Pages/Cascadia-Subduction-Zone.aspx 
 * Washington State Department of Natural Resources<br> 
     * (https://www.dnr.wa.gov/programs-and-services/geology/geologic-hazards/emergency-preparedness#earthquakes.7)
     * https://www.dnr.wa.gov/programs-and-services/geology/geologic-hazards/emergency-preparedness#earthquakes.7
 * Web MD
-    * (https://www.webmd.com/diet/features/estimated-calorie-requirement)
+    * https://www.webmd.com/diet/features/estimated-calorie-requirement
 * Seattle Emergency Hubs Locator<br>
     * http://seattleemergencyhubs.org/about-us/mission/
 * Youtube
-    * EarthQuake Simulator Youtube Video<br> (https://www.youtube.com/watch?v=hos_uIKwC-c)
-    * BBC Documentary Youtube Video<br> (https://www.youtube.com/watch?v=VR95-T6DvQM&t=2323s)
+    * EarthQuake Simulator Youtube Video<br> https://www.youtube.com/watch?v=hos_uIKwC-c
+    * BBC Documentary Youtube Video<br> https://www.youtube.com/watch?v=VR95-T6DvQM&t=2323s
+* University of Utah
+    * https://quake.utah.edu/regional-info/earthquake-faq#B 
+* Live Science
+    * https://www.livescience.com/31464-earthquake-magnitude-explained.html 
+* National Geographic
+    * https://news.nationalgeographic.com/2017/10earthquakes-big-one-cascadia-seattle-geology-science/ 
+
+
 
 ### I-Frame
 * Seattle Emergency Hubs
-    * (http://seattleemergencyhubs.org/seattle-emergency-neighborlink-map/)
+    * http://seattleemergencyhubs.org/seattle-emergency-neighborlink-map/
 
 
 ## Creators
