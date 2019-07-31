@@ -1,5 +1,78 @@
-@media print {
+/* @media print {
   h2, h1, nav, iframe, h3, button {
     display: none;
   }
+} */
+html {
+  background: url(/img/vector.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 100px;
+  object-fit: fill;
+}
+#hero {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  width: 30em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  /* background-color:rgba(204, 203, 203, 0.507); */
+  
+}
+body {
+  margin-left: auto;
+  margin-right:auto;
+}
+
+nav {
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  margin-bottom: 30px;
+  width: 100%;
+  padding: .85em;
+  position: fixed;
+  top: 0;
+  text-align:center;
+}
+
+nav ul {
+  text-align: center;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 25px;
+  padding: 15px;
+  /* transition: .5s; */
+  position: sticky;
+}
+
+nav a{
+  text-decoration: none;
+  color: rgb(185, 185, 185)
+}
+
+nav ul :hover{
+  transition-property: color;
+   transition-duration: 0.4s;
+   transition-timing-function: ease;
+   transition-delay: 0s;
+  color: rgb(249, 251, 252);
+}
+
+main {
+  width: 960px;
+  margin: auto;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.637);
+  color:rgb(197, 201, 199);
+  line-height: 1.3;
+}
+h3 {
+  color: rgb(123, 165, 170);
+  font-size: 1.5em;
 }
