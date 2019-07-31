@@ -10,9 +10,10 @@
   width: 100%;
   /* width: 960px; */
   height: 60px;
-  position: fixed;
-  top: 68px;
+  position: relative;
+  /* top: 68px; */
   text-align: center;
+  margin: auto;
 }
 
 
@@ -23,6 +24,7 @@
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+  margin: auto;
 }
 
 @-webkit-keyframes fade {
