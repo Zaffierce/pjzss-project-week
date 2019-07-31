@@ -1,8 +1,9 @@
-/* @media print {
+@media print {
   h2, h1, nav, iframe, h3, button {
     display: none;
   }
-} */
+} 
+
 html {
   background: url(/img/vector.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -49,6 +50,13 @@ nav ul {
   padding: 15px;
   /* transition: .5s; */
   position: sticky;
+}
+
+nav li {
+  text-align: center;
+  display: inline-block;
+  font-size: 25px;
+  padding: 15px;
 }
 
 nav a{
