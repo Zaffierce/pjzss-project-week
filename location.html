@@ -5,33 +5,43 @@
   <title>Location Page</title>
   <link rel="stylesheet" type="text/css" href="css/reset.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/locations.css" />
 </head>
 
 <body>
-	<header>
-		<nav id="navBar">
-		</nav>
-	</header>
+  <header>
+    <nav id="navBar">
+    </nav>
+  </header>
 
-  <main>
-    <h1>Please Pick Your ZipCode</h1>
-    <!-- random fact -->
-    <h2 id="zipcode-notification"></h2>
-    <form>
-      <label>Drop Down Menu</label>
-      <select id="dropdown">
-        <option value="default">[Select your Zip]</option>
-      </select>
-    </form>
-    <button onclick="window.print()">Print This Page</button>
-    <ul id="locationList">
-    </ul>
-    <!-- iframe for map -->
+  <main id="locations-main">
+
+    <div id="pick-zip">
+      <h1>Please Pick Your Zip Code</h1>
+      <h2 id="zipcode-notification"></h2>
+      <!-- random fact -->
+      <form>
+        <select id="dropdown">
+          <option value="default">[Select your Zip]</option>
+        </select>
+      </form>
+
+      <div id="location-box">
+        <ul id="locationList">
+        </ul>
+      </div>
+      <!-- iframe for map -->
+
+    </div>
     <div id="iframediv">
       <h3>For all Emergency Hub Locations, please see the map below.</h3>
-      <iframe src="https://www.google.com/maps/d/embed?mid=1mtS4LK_-BMm2TqP2su-Y1cIZUOk" width="640"
+      <iframe src="https://www.google.com/maps/d/embed?mid=1mtS4LK_-BMm2TqP2su-Y1cIZUOk" width="540"
         height="480"></iframe>
+      <div id="print">
+        <button onclick="window.print()">Print This Page</button>
+      </div>
     </div>
+
   </main>
 
   <footer>
