@@ -2,52 +2,52 @@
 <html lang="en">
 
 <head>
-  <title>Location Page</title>
-  <link rel="stylesheet" type="text/css" href="css/reset.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" href="css/locations.css" />
+    <title>Location Page</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/locations.css" />
 </head>
 
 <body>
-  <header>
-    <nav id="navBar">
-    </nav>
-  </header>
+    <header>
+        <nav id="navBar">
+        </nav>
+    </header>
 
-  <main id="locations-main">
+    <main id="locations-main">
 
-    <div id="pick-zip">
-      <h1>Please Pick Your Zip Code</h1>
-      <h2 id="zipcode-notification"></h2>
-      <!-- random fact -->
-      <form>
-        <select id="dropdown">
+        <div id="pick-zip">
+            <h1>Please Pick Your Zip Code</h1>
+            <h2 id="zipcode-notification"></h2>
+            <!-- random fact -->
+            <form>
+                <select id="dropdown">
           <option value="default">[Select your Zip]</option>
         </select>
-      </form>
+            </form>
 
-      <div id="location-box">
-        <ul id="locationList">
-        </ul>
-      </div>
-      <!-- iframe for map -->
+            <div id="location-box">
+                <ul id="locationList">
+                </ul>
+                <div id="print">
+                    <button class="inputbutton" onclick="window.print()">Print This Page</button>
+                </div>
+            </div>
+            <!-- iframe for map -->
 
-    </div>
-    <div id="iframediv">
-      <h3>For all Emergency Hub Locations, please see the map below.</h3>
-      <iframe src="https://www.google.com/maps/d/embed?mid=1mtS4LK_-BMm2TqP2su-Y1cIZUOk" width="540"
-        height="480"></iframe>
-      <div id="print">
-        <button onclick="window.print()">Print This Page</button>
-      </div>
-    </div>
+        </div>
+        <div id="iframediv">
+            <h3>For all Emergency Hub Locations, please see the map below.</h3>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1mtS4LK_-BMm2TqP2su-Y1cIZUOk&ll=47.606780157394645%2C-122.32876940000006&z=12" width="540" height="480"></iframe>
 
-  </main>
+        </div>
 
-  <footer>
-    <script src=" js/app.js" type="text/javascript"></script>
-    <script src="js/navbar.js" type="text/javascript"></script>
-  </footer>
+    </main>
+
+    <footer>
+        <script src=" js/app.js" type="text/javascript"></script>
+        <script src="js/navbar.js" type="text/javascript"></script>
+    </footer>
 </body>
 
 </html>
