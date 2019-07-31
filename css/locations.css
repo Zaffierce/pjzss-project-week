@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Istok+Web&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:200i,300&display=swap');
+
+#locations-main {
+  width: 95%;
+}
+
+#print {
+  text-align: right;
+}
+
+#pick-zip {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  margin: 25px;
+}
+
+#pick-zip h1 {
+  font-family: 'Muli', sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+  color: rgb(177, 219, 249);
+}
+
+#location-box {
+ margin-left: auto;
+ margin-right: auto;
+ width: 640px;
+}
+
+/* in renderAllLocations function, change j to i */
+
+#locationList {
+  text-align: left;
+  font-size: 20px;
+  margin: 25px;
+}
+
+#locationList li {
+  list-style-image: url('../img/bullet_white.png');
+  font-family: 'Istok Web', sans-serif;
+}
+
+#zipcode-notification {
+  font-family: 'Istok Web', sans-serif;
+  font-size: 18px;
+}
+
+#iframediv {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+#iframediv h3 {
+  font-size: 22px;
+  margin: 25px;
+  font-family: 'Istok Web', sans-serif;
+  color: rgb(177, 219, 249);
+}
