@@ -65,7 +65,7 @@ EHub.prototype.renderList = function () {
 
 function renderAllLocations() {
   for (var i = 0; i < allLocationsArray.length; i++) {
-    for (var j = 0; j < allLocationsArray[j].locationArray.length; j++) {
+    for (var j = 0; j < allLocationsArray[i].locationArray.length; j++) {
       var liEl = document.createElement('li');
       liEl.textContent = allLocationsArray[i].locationArray[j];
       ulEl.appendChild(liEl);
