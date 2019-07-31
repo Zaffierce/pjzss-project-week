@@ -16,8 +16,8 @@ To view the Repository, please visit the web address:<br>
 ## Resources and References
 
 * Code Fellows Instructoral Team
-    * Lena
-    * Ron
+    * Lena Eivy
+    * Ron Dunphy
     * _Heroes of Old_
 
 ### Websites
@@ -59,29 +59,22 @@ JavaScript Dev's and Students at CodeFellows:
 * Sharina Stubbs
 
 
-## Conflict Resolution Plan 
+## Communication Plan 
 
 Communication Formats After Hours and On Weekend: 
 * Slack  
 * Trello for file sharing, To Do lists 
 
 Communication in the code: 
-* Go way overkill on the comments. Comment at every single line getting started. 
-
-Emergency communication 
-* Sharina- call twice... 206-919-1357 
-* Peter – 425-802-8005 
-* Susanna – 206-496-2611 
-* Jon – 360-994-0078 
-* Zarek – 505-933-0591   
+* Go way overkill on the comments. Comment at every single line getting started.    
 
 Group Working Hours 
 * 9am – 6pm group time 
-* 8am- 9:15pm be aware group member(s) may need to communicate 
+* 8am- 9:15pm be aware group member(s) may need to communicate after group time
 
 Strategy for Making Sure Voices are Heard (within a safe environment) 
 * Three a day check-in meetings
-* Morning meeting - 9am start time – debrief and prep for day  
+* Morning meeting - 9am start time – debrief, code review and prep for day  
 * After lunch – 1pm start time – review the morning, re-check in, and brainstorm as needed for afternoon. 
 * Before leaving for the day – 5:30pm? How the morning and afternoon went 
 
@@ -95,3 +88,27 @@ General Guidelines:
 If we’re moving too fast: 
 * Person who is slower - speak up! Fast coders can slow down.  
 * Person who is coding fast may need to take a break and help person catch up.  
+
+## Conflict Resolution Plan
+Process to resolve conflicts
+1. Everyone stops coding 
+2. Return to communication ground rules.  
+3. Try to understand the conflict 
+4. Come to mutual agreement without taking sides 
+5. Find a compromise between the two intersecting viewpoints 
+6. Discuss things and find happy place 
+7. When conflict is resolved, mandatory 10 minute break to relax.  
+
+ 
+ How to raise concerns to members not adequately contributing 
+
+* First step: Find out why the person is falling behind, without judgement.  
+* Put out the invitation to share - if something else outside of project is going on, preventing the person from being present, etc.  
+* During briefs in morning, check in with each other with how they’re doing with a task. 
+* Honesty from each of us about assigned tasks.  
+* Ask for help when needed.  
+ 
+
+How and when to escalate conflict when attempts are unsuccessful: 
+* If person is unwilling to talk through or unwilling to improve. They may be going through the motions, but not contributing, not willing to work on issue, and not willing to reach out.  
+* Escalation will involve reaching out to Boss and HR (Lena and Ron).  
