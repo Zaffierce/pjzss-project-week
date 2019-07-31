@@ -9,26 +9,24 @@
 </head>
 
 <body>
-	<header>
-		<nav id="navBar">
-		</nav>
-	</header>
+    <header>
+        <nav id="navBar">
+        </nav>
+    </header>
 
     <main>
         <h3>Numbers are based on the estimated three weeks of necessary supplies during a disaster -- LINK TO REF</h3>
         <h2>What is the size of your family?</h2>
         <section id="familyForm">
             <form>
-                <input type="text" name="familyNumber"><br>
-                <button type="submit" name="familyNumberButton">Submit Family Number</button>
+                <input id="inputbox" type="number" name="familyNumber" value=1><br>
+                <button class="inputbutton" type="submit" name="familyNumberButton">Submit Family Number</button>
+                <button class="inputbutton" type="submit" name="printButton">Print this Shopping List</button>
                 <!-- Have alert if !number -->
             </form>
         </section>
-        <form id="foodList">
-            <fieldset id="foodFieldset">
-
-            </fieldset>
-        </form>
+        <div id="items">
+        </div>
     </main>
 
     <footer>
