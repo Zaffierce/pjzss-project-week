@@ -1,60 +1,102 @@
 @import url('https://fonts.googleapis.com/css?family=Istok+Web&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Muli:200i,300&display=swap');
-
 #locations-main {
-  width: 95%;
+    width: 1400px;
 }
 
 #print {
-  text-align: right;
+    text-align: right;
+    display: none;
 }
 
 #pick-zip {
-  text-align: center;
-  display: inline-block;
-  vertical-align: top;
-  margin: 25px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin: 25px;
 }
 
 #pick-zip h1 {
-  font-family: 'Muli', sans-serif;
-  font-weight: 100;
-  font-size: 30px;
-  color: rgb(177, 219, 249);
+    font-family: 'Muli', sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    color: rgb(177, 219, 249);
 }
 
 #location-box {
- margin-left: auto;
- margin-right: auto;
- width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 640px;
 }
+
 
 /* in renderAllLocations function, change j to i */
 
 #locationList {
-  text-align: left;
-  font-size: 20px;
-  margin: 25px;
+    text-align: left;
+    font-size: 20px;
+    margin: 25px;
 }
 
 #locationList li {
-  list-style-image: url('../img/bullet_white.png');
-  font-family: 'Istok Web', sans-serif;
+    list-style-image: url('../img/bullet_white.png');
+    font-family: 'Istok Web', sans-serif;
 }
 
 #zipcode-notification {
-  font-family: 'Istok Web', sans-serif;
-  font-size: 18px;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 18px;
 }
 
 #iframediv {
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-bottom: 25px;
 }
+
 #iframediv h3 {
-  font-size: 22px;
-  margin: 25px;
-  font-family: 'Istok Web', sans-serif;
-  color: rgb(177, 219, 249);
+    font-size: 22px;
+    margin: 25px;
+    font-family: 'Istok Web', sans-serif;
+    color: rgb(177, 219, 249);
+}
+
+.inputbutton {
+    float: left;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background: #3D94F6;
+    background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -ms-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: -o-linear-gradient(top, #3D94F6, #1E62D0);
+    background-image: linear-gradient(to bottom, #3D94F6, #1E62D0);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 4px;
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 200px;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 20px;
+    box-shadow: 3px 3px 14px 0px #3f3939;
+    -webkit-box-shadow: 3px 3px 14px 0px #000000;
+    -moz-box-shadow: 3px 3px 14px 0px #000000;
+    border: outset #FFFFFF 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inputbutton:hover {
+    background: #D0D0D0;
+    background-image: -webkit-linear-gradient(top, #D0D0D0, #1C4470);
+    background-image: -moz-linear-gradient(top, #D0D0D0, #1C4470);
+    background-image: -ms-linear-gradient(top, #D0D0D0, #1C4470);
+    background-image: -o-linear-gradient(top, #D0D0D0, #1C4470);
+    background-image: linear-gradient(to bottom, #D0D0D0, #1C4470);
+    text-decoration: none;
 }
