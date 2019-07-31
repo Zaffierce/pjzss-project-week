@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:200i,300&display=swap');
-
-table, td, th {
+table,
+td,
+th {
     border: 1px solid black;
     text-align: left;
     padding: 10px;
@@ -71,19 +72,19 @@ th {
     text-decoration: none;
 }
 
-h3, h2 {
+h3,
+h2 {
     font-family: 'Muli', sans-serif;
     color: rgb(177, 219, 249);
+    font-size: 25px;
     margin-left: 60px;
     padding-top: 25px;
-    font-size: 25px;
 }
 
-
-a {
+main a {
     text-decoration: none;
     /* margin: 35px; */
     font-size: 25px;
     color: rgb(192, 209, 238);
     border-bottom: 1px rgb(192, 209, 238) dashed;
-  }
+}
