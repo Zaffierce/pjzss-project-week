@@ -1,54 +1,52 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Istok+Web&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Muli:200i,300&display=swap');
-
-
 #resources-main {
-  width: 95%;
-  vertical-align: top;
+    width: 1400px;
+    vertical-align: top;
 }
 
 #h2-style {
-  font-family: 'Muli', sans-serif;
-  font-size: 34px;
-  color: rgb(177, 219, 249);
-  text-align: center;
-  padding-top: 20px;
-  font-weight: 100;
+    font-family: 'Muli', sans-serif;
+    font-size: 34px;
+    color: rgb(177, 219, 249);
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 100;
 }
 
 .h3-style {
-  font-size: 28px;
-  margin: 25px;
-  font-family: 'Istok Web', sans-serif;
-  color: rgb(177, 219, 249);
-  text-align: center;
+    font-size: 28px;
+    margin: 25px;
+    font-family: 'Istok Web', sans-serif;
+    color: rgb(177, 219, 249);
+    text-align: center;
 }
 
 .h4-style {
-  text-align: left;
-  font-size: 20px;
-  margin: 25px;
-  font-family: 'Istok Web', sans-serif;
+    text-align: left;
+    font-size: 20px;
+    margin: 25px;
+    font-family: 'Istok Web', sans-serif;
 }
 
 #link-box {
-  display: inline-block;
-  margin: 25px;
+    display: inline-block;
+    margin: 25px;
 }
 
 #resources-main a {
-  text-decoration: none;
-  margin: 35px;
-  font-size: 24px;
-  color: rgb(192, 209, 238);
-  border-bottom: 1px rgb(192, 209, 238) dashed;
+    text-decoration: none;
+    margin: 35px;
+    font-size: 24px;
+    color: rgb(192, 209, 238);
+    border-bottom: 1px rgb(192, 209, 238) dashed;
 }
 
 #video-box {
-  display: inline-block;
-  vertical-align: top;
-  margin: 25px;
-  text-align: right;
-  margin-left: 250px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 25px;
+    text-align: right;
+    margin-left: 250px;
 }
