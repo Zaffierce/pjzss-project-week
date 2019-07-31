@@ -13,17 +13,34 @@ html {
   margin-top: 100px;
   object-fit: fill;
 }
+
 #hero {
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
-  width: 30em;
+  width: 300px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
-  /* background-color:rgba(204, 203, 203, 0.507); */
-  
 }
+
+#herotext {
+  text-align: center;
+  font-size: 70px;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  font-family: 'Marcellus SC', serif;
+  color: rgb(0, 0, 0);
+  -webkit-filter: drop-shadow(5px 5px 7px rgb(212, 212, 212));
+  filter: drop-shadow(5px 5px 7px rgb(212, 212, 212));
+  font-weight: bold;
+  margin: auto;
+  width: 970px;
+}
+
+#herotext h4 {
+  font-size: 40px;
+}
+
 body {
   margin-left: auto;
   margin-right:auto;
@@ -34,7 +51,7 @@ nav {
   overflow: hidden;
   margin-bottom: 30px;
   width: 100%;
-  padding: .85em;
+  /* padding: .85em; */
   position: fixed;
   top: 0;
   text-align:center;
@@ -61,7 +78,8 @@ nav li {
 
 nav a{
   text-decoration: none;
-  color: rgb(185, 185, 185)
+  color: rgb(185, 185, 185);
+  vertical-align: 15px;
 }
 
 nav ul :hover{
@@ -72,6 +90,10 @@ nav ul :hover{
   color: rgb(249, 251, 252);
 }
 
+nav img {
+  width: 50px;
+  height: 50px;
+}
 main {
   width: 960px;
   margin: auto;
@@ -84,3 +106,22 @@ h3 {
   color: rgb(123, 165, 170);
   font-size: 1.5em;
 }
+
+.text {
+  color: #f2f2f2;
+  padding: 8px 12px;
+  bottom: 7px;
+  width: 960px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* background-color: rgb(0, 0, 0);
+width: 60%;
+/* width: 960px; */
+height: 60px;
+position: relative;
+/* top: 68px; */
+text-align: center;
+margin: auto; */
