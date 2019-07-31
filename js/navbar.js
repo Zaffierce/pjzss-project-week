@@ -14,13 +14,15 @@ var navBarEl = document.getElementById('navBar');
 function renderNav() {
   var navLogoEl = document.createElement('div');
   navBarEl.appendChild(navLogoEl);
-  var navLogoImg = document.createElement('img');
-  // navLogoImg.setAttribute('src', 'img/logo.png');
-  navLogoEl.appendChild(navLogoImg);
   var ulEl = document.createElement('ul');
   navLogoEl.appendChild(ulEl);
+  var liEl = document.createElement('li');
+  ulEl.appendChild(liEl);
+  var navLogoImg = document.createElement('img');
+  navLogoImg.setAttribute('src', 'img/logo.png');
+  liEl.appendChild(navLogoImg);
   for (var i = 0; i < navBarItems.length; i++) {
-    var liEl = document.createElement('li');
+    liEl = document.createElement('li');
     ulEl.appendChild(liEl);
     var aEl = document.createElement('a');
     aEl.setAttribute('href', navBarItems[i].link);

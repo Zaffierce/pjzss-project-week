@@ -98,7 +98,6 @@ Process to resolve conflicts
 5. Find a compromise between the two intersecting viewpoints 
 6. Discuss things and find happy place 
 7. When conflict is resolved, mandatory 10 minute break to relax.  
-
  
  How to raise concerns to members not adequately contributing 
 
