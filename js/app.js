@@ -3,16 +3,17 @@
 var allLocationsArray = [];
 var printEl = document.getElementById('print');
 // rendering variables
-var pullDown = document.getElementById('dropdown');
+var submitEl = document.getElementById('zip-submit');
 var ulEl = document.getElementById('locationList');
 var elh2 = document.getElementById('zipcode-notification');
-
+var invalidEl = document.getElementById('invalid-alert');
+var showAllEl = document.getElementById('show-all');
 var selectedValue;
 
 function EHub(zipcode, locationArray) {
-    this.zipcode = zipcode;
-    this.locationArray = locationArray;
-    allLocationsArray.push(this);
+  this.zipcode = zipcode;
+  this.locationArray = locationArray;
+  allLocationsArray.push(this);
 }
 
 // === Instances ===
@@ -53,104 +54,79 @@ new EHub('98178', ['Leo Farm, 51st Ave S and S Leo St']);
 console.log(allLocationsArray);
 
 // === Prototype Function - renders location array living in constructor function ===
-EHub.prototype.renderList = function() {
-    console.log('this is the location array within renderList', this.locationArray);
-    ulEl.innerHTML = '';
-    for (var j = 0; j < this.locationArray.length; j++) {
-        var liEl = document.createElement('li');
-        liEl.textContent = this.locationArray[j];
-        ulEl.appendChild(liEl);
-    }
+EHub.prototype.renderList = function () {
+  console.log('this is the location array within renderList', this.locationArray);
+  ulEl.innerHTML = '';
+  for (var j = 0; j < this.locationArray.length; j++) {
+    var liEl = document.createElement('li');
+    liEl.textContent = this.locationArray[j];
+    ulEl.appendChild(liEl);
+  }
 };
 
 function renderAllLocations() {
-    for (var i = 0; i < allLocationsArray.length; i++) {
-        for (var j = 0; j < allLocationsArray[i].locationArray.length; j++) {
-            var liEl = document.createElement('li');
-            liEl.textContent = allLocationsArray[i].locationArray[j];
-            ulEl.appendChild(liEl);
-        }
+  for (var i = 0; i < allLocationsArray.length; i++) {
+    for (var j = 0; j < allLocationsArray[i].locationArray.length; j++) {
+      var liEl = document.createElement('li');
+      liEl.textContent = allLocationsArray[i].locationArray[j];
+      ulEl.appendChild(liEl);
     }
+  }
+  invalidEl.textContent = '';
+  renderButton();
 }
 
 
 // Does actions if localStorage exists
-function actionsOnLocalStorage() {
-    if (localStorage.length > 0) {
-        console.log('Inside if statement about local storage being greater than zero', localStorage);
-        getLocalStorage();
-        elh2.textContent = `The last zipcode you chose was ${getLocalStorage()}`;
-    } else {
-        elh2.textContent = '';
-    }
+function showPreviousZipcode() {
+  if (localStorage.length > 0) {
+    getLocalStorage();
+    elh2.textContent = `The zipcode you chose on your last visit was ${getLocalStorage()}.`;
+  } else {
+    elh2.textContent = '';
+  }
 }
-
 
 // === Functions ===
-function renderDropDown() {
-    var optionEl = document.createElement('option');
-    optionEl.textContent = 'Show All';
-    optionEl.value = 'Show All';
-    pullDown.appendChild(optionEl);
-    for (var i = 0; i < allLocationsArray.length; i++) {
-        optionEl = document.createElement('option');
-        optionEl.textContent = allLocationsArray[i].zipcode;
-        //optionEl.textContent=localStorage||allLocationsArray[i].zipcode;
-        console.log(i);
-        optionEl.value = allLocationsArray[i].zipcode;
-        pullDown.appendChild(optionEl);
-    }
-}
 
+// sets print button to visible 
 function renderButton() {
-    printEl.style.display = 'block';
+  printEl.style.display = 'block';
 }
 
-
+// sets local storage
 function setLocalStorage() {
-    var stringifiedData = JSON.stringify(selectedValue);
-    localStorage.setItem('keyZip', stringifiedData);
+  var stringifiedData = JSON.stringify(selectedValue);
+  localStorage.setItem('keyZip', stringifiedData);
 }
 
-
+// grabs local storage and parses it
 function getLocalStorage() {
-    var grabLocalStorage = localStorage.getItem('keyZip');
-    var parsedLocalStorage = JSON.parse(grabLocalStorage);
-    //selectedValue = parsedLocalStorage;
-    return parsedLocalStorage;
+  var grabLocalStorage = localStorage.getItem('keyZip');
+  var parsedLocalStorage = JSON.parse(grabLocalStorage);
+  return parsedLocalStorage;
 }
-
+showPreviousZipcode();
 
 // === Event Handler ===
-function handlePullDown() {
-    //console.log('inside handler');
-    actionsOnLocalStorage();
-    selectedValue = document.getElementById('dropdown').value;
-    for (var i = 0; i < allLocationsArray.length; i++) {
-
-        //console.log(i, 'inside for loop of handlePullDown', selectedValue);
-        //console.log('checking zipcode and selectedValue', allLocationsArray[i].zipcode);
-        if (selectedValue === allLocationsArray[i].zipcode.toString()) {
-            allLocationsArray[i].renderList();
-
-            console.log('inside if statement of selectedValue', allLocationsArray[i].locationArray);
-            console.log('in pullDown onchange function');
-        }
-
+function handleTextInput() {
+  var validInput = false;
+  selectedValue = document.getElementById('zip-input').value;
+  for (var i = 0; i < allLocationsArray.length; i++) {
+    var zipcode = allLocationsArray[i].zipcode;
+    if (selectedValue === zipcode) {
+      invalidEl.textContent = '';
+      allLocationsArray[i].renderList();
+      renderButton();
+      setLocalStorage();
+      validInput = true;
+      console.log('valid input in if statement is ', validInput);
+    } else if (validInput === false) {
+      invalidEl.textContent = 'Please Enter A Valid Seattle Zip Code.';
     }
-    if (selectedValue === 'Show All') {
-        renderAllLocations();
-    }
-    renderButton();
-    setLocalStorage();
+  }
 }
 
+submitEl.addEventListener('click', handleTextInput);
+showAllEl.addEventListener('click', renderAllLocations);
 
-
-// for (var i = 0; i < allLocationsArray.length; i++){
-//   allLocationsArray[i].renderList();
-// }
-
-pullDown.addEventListener('change', handlePullDown);
-renderDropDown();
-//setLocalStorage();
