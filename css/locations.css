@@ -8,7 +8,9 @@
   iframe,
   h3,
   button,
-  #fact-container {
+  #fact-container,
+  .button
+      {
      display: none;
     }
 }
@@ -91,8 +93,6 @@ h1 {
     margin-right: auto;
     width: 640px;
 }
-
-/* in renderAllLocations function, change j to i */
 
 #locationList {
     text-align: left;
