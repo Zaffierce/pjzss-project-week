@@ -1,17 +1,20 @@
-# pjzss-project-week
+# Seattle Earthquake Awareness
 201 Project Week for team PJZZS.  
-## README
 
-Our Project is a web-app designed for Seattle users to prepare for EarthQuake disaster.
+## About
+
+Our project is a web-app designed for Seattle users to prepare for a large disaster.
 
 <br>
-All Users will be able to identify Emergency Hub Locations in the area, and to properly prepare their households with enough food to survive a food-shortage, based on the bridge and port dependancy of Seattle.
+All Users will be able to identify community emergency hubs in the area, and to properly prepare their households with enough food and water to survive a supply shortage, based on the bridge and port dependancy of Seattle.
+
+![screenshot of page](img/earthquakeApp.JPG)
 
 
 ## Repo
-To view the Repository, please visit the web address:<br>
+To view the repository, please visit the web address:<br>
 
-(https//github.Zaffierce/pjzss-project-week)
+https//github.Zaffierce/pjzss-project-week
 
 ## Resources and References
 
@@ -36,7 +39,7 @@ To view the Repository, please visit the web address:<br>
 * Oregon . Gov
     * https://www.oregon.gov/oem/hazardsprep/Pages/Cascadia-Subduction-Zone.aspx 
 * Washington State Department of Natural Resources<br> 
-    * (https://www.dnr.wa.gov/programs-and-services/geology/geologic-hazards/emergency-preparedness#earthquakes.7)
+    * https://www.dnr.wa.gov/programs-and-services/geology/geologic-hazards/emergency-preparedness#earthquakes.7
     * https://www.dnr.wa.gov/programs-and-services/geology/geologic-hazards/emergency-preparedness#earthquakes.7
 * Web MD
     * https://www.webmd.com/diet/features/estimated-calorie-requirement
