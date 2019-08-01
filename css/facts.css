@@ -12,8 +12,8 @@
     width: 100%;
     /* width: 960px; */
     height: 60px;
-    position: relative;
-    /* top: 68px; */
+    position: fixed;
+    top: 85px;
     text-align: center;
     margin: auto;
 }
